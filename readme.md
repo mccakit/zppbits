@@ -1,2 +1,7 @@
-conan install . --build=missing --profile=musl -of ./conan --deployer=full_deploy --envs-generation=false
-cmake -B build -G Ninja -DCMAKE_TOOLCHAIN_FILE=/home/mccakit/dev/toolchains/static/cmake/x86_64-unknown-linux-musl.cmake
+Port of zppbits to C++ modules, C++26 required.
+
+API reference [here](https://mccakit.github.io/zppbits/)
+
+Manual [here](https://github.com/mccakit/zppbits/blob/main/docs/manual/manual.pdf)
+
+Built by CMake, packaged by pkgconf.
