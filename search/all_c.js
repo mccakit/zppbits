@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['option_0',['option',['../structzpp_1_1bits_1_1option.html',1,'zpp::bits']]],
+  ['option_3c_20alloc_5flimit_3c_20size_20_3e_20_3e_1',['option&lt; alloc_limit&lt; Size &gt; &gt;',['../structzpp_1_1bits_1_1option.html',1,'zpp::bits']]],
+  ['option_3c_20append_20_3e_2',['option&lt; append &gt;',['../structzpp_1_1bits_1_1option.html',1,'zpp::bits']]],
+  ['option_3c_20big_20_3e_3',['option&lt; big &gt;',['../structzpp_1_1bits_1_1option.html',1,'zpp::bits']]],
+  ['option_3c_20enlarge_5foverflow_20_3e_4',['option&lt; enlarge_overflow &gt;',['../structzpp_1_1bits_1_1option.html',1,'zpp::bits']]],
+  ['option_3c_20enlarger_3c_20multiplier_2c_201_20_3e_20_3e_5',['option&lt; enlarger&lt; Multiplier, 1 &gt; &gt;',['../structzpp_1_1bits_1_1option.html',1,'zpp::bits']]],
+  ['option_3c_20little_20_3e_6',['option&lt; little &gt;',['../structzpp_1_1bits_1_1option.html',1,'zpp::bits']]],
+  ['option_3c_20no_5fenlarge_5foverflow_20_3e_7',['option&lt; no_enlarge_overflow &gt;',['../structzpp_1_1bits_1_1option.html',1,'zpp::bits']]],
+  ['option_3c_20no_5ffit_5fsize_20_3e_8',['option&lt; no_fit_size &gt;',['../structzpp_1_1bits_1_1option.html',1,'zpp::bits']]],
+  ['option_3c_20no_5fsize_20_3e_9',['option&lt; no_size &gt;',['../structzpp_1_1bits_1_1option.html',1,'zpp::bits']]],
+  ['option_3c_20reserve_20_3e_10',['option&lt; reserve &gt;',['../structzpp_1_1bits_1_1option.html',1,'zpp::bits']]],
+  ['option_3c_20resize_20_3e_11',['option&lt; resize &gt;',['../structzpp_1_1bits_1_1option.html',1,'zpp::bits']]],
+  ['option_3c_20size1b_20_3e_12',['option&lt; size1b &gt;',['../structzpp_1_1bits_1_1option.html',1,'zpp::bits']]],
+  ['option_3c_20size2b_20_3e_13',['option&lt; size2b &gt;',['../structzpp_1_1bits_1_1option.html',1,'zpp::bits']]],
+  ['option_3c_20size4b_20_3e_14',['option&lt; size4b &gt;',['../structzpp_1_1bits_1_1option.html',1,'zpp::bits']]],
+  ['option_3c_20size8b_20_3e_15',['option&lt; size8b &gt;',['../structzpp_1_1bits_1_1option.html',1,'zpp::bits']]],
+  ['option_3c_20size_5fnative_20_3e_16',['option&lt; size_native &gt;',['../structzpp_1_1bits_1_1option.html',1,'zpp::bits']]],
+  ['option_3c_20size_5fvarint_20_3e_17',['option&lt; size_varint &gt;',['../structzpp_1_1bits_1_1option.html',1,'zpp::bits']]],
+  ['optional_18',['optional',['../conceptzpp_1_1bits_1_1concepts_1_1optional.html',1,'zpp::bits::concepts']]],
+  ['optional_5fptr_19',['optional_ptr',['../structzpp_1_1bits_1_1optional__ptr.html',1,'zpp::bits']]],
+  ['out_20',['out',['../classzpp_1_1bits_1_1out.html',1,'zpp::bits']]],
+  ['out_3c_20types_2e_2e_2e_20_3e_21',['out&lt; Types... &gt;',['../classzpp_1_1bits_1_1out.html',1,'zpp::bits']]],
+  ['owning_5fpointer_22',['owning_pointer',['../conceptzpp_1_1bits_1_1concepts_1_1owning__pointer.html',1,'zpp::bits::concepts']]]
+];
