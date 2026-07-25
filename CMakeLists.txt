@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 4.4)
-project(zppbits VERSION 4.7.3 DESCRIPTION "placeholder" LANGUAGES C CXX)
+project(
+    zppbits
+    VERSION 4.7.3
+    DESCRIPTION "A lightweight C++ serialization and RPC library"
+    LANGUAGES C CXX)
 set(CMAKE_EXPERIMENTAL_FIND_CPS_PACKAGES ON)
 set(CMAKE_CXX_MODULE_STD ON)
 set(CMAKE_CXX_STANDARD 26)
