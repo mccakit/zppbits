@@ -1,5 +1,7 @@
 # zpp.bits
 
+[User Manual](https://github.com/mccakit/zppbits/blob/main/docs/user_manual.md) | [Api Reference](https://mccakit.github.io/zppbits/)
+
 zpp.bits is a C++ Module port of zpp.bits, A lightweight C++20 serialization and RPC library
 
 Project is built using CMake/Ninja and packaged via CPS. CMake 4.4 and later is required.
