@@ -1,4 +1,5 @@
 # zpp.bits
+
 **A binary serialization and RPC library — User Manual**
 
 C++ Module port based on [`eyalz800/zpp_bits`](https://github.com/eyalz800/zpp_bits).
@@ -8,7 +9,6 @@ C++ Module port based on [`eyalz800/zpp_bits`](https://github.com/eyalz800/zpp_b
 ## Table of Contents
 
 **Guide**
-
 - [Quick Start](#quick-start)
 - [Serializing Your Types](#serializing-your-types)
 - [Error Handling](#error-handling)
@@ -23,12 +23,10 @@ C++ Module port based on [`eyalz800/zpp_bits`](https://github.com/eyalz800/zpp_b
 - [Advanced Archive Controls](#advanced-archive-controls)
 
 **Reference**
-
 - [Error Codes](#error-codes)
 - [Literal Operators](#literal-operators)
 
 **Appendix**
-
 - [Benchmark](#benchmark)
 - [Limitations](#limitations)
 
@@ -460,7 +458,7 @@ out(v);
 in(v);
 ```
 
-_Caveat:_ make sure the size type is large enough — otherwise items are
+*Caveat:* make sure the size type is large enough — otherwise items are
 silently dropped according to unsigned conversion rules.
 
 The size can also be omitted entirely:
@@ -613,7 +611,7 @@ out(zpp::bits::bytes(points));
 in(zpp::bits::bytes(points));
 ```
 
-In this form the size is _not_ serialized. As a workaround, cast to
+In this form the size is *not* serialized. As a workaround, cast to
 `std::span<std::byte>` if a size prefix is required.
 
 ---
@@ -623,7 +621,7 @@ In this form the size is _not_ serialized. As a workaround, cast to
 There is no perfect tool for backwards compatibility in a zero-overhead
 format, but `std::variant` is a natural fit for versioning and for
 polymorphic dispatch. Note that under C++26 the explicit
-`using serialize = members<N>;` declarations below are _not_ required — they
+`using serialize = members<N>;` declarations below are *not* required — they
 are shown only because the difference in member count is what distinguishes
 the two versions semantically:
 
@@ -1400,16 +1398,16 @@ struct node
 
 All three error-handling styles share the same set of `std::errc` codes:
 
-| Code                  | Meaning                                                        |
-| --------------------- | -------------------------------------------------------------- |
-| `result_out_of_range` | Attempting to write to or read from a too-short buffer.        |
-| `no_buffer_space`     | Growing buffer would exceed allocation limits or overflow.     |
-| `value_too_large`     | Varint encoding is beyond representation limits.               |
-| `message_size`        | Message size exceeds user-defined allocation limits.           |
-| `not_supported`       | Attempt to call an RPC that is not listed as supported.        |
-| `bad_message`         | Attempt to read a variant of unrecognized type.                |
-| `invalid_argument`    | Attempting to serialize a null pointer or a valueless variant. |
-| `protocol_error`      | Attempt to deserialize an invalid protocol message.            |
+| Code | Meaning |
+|---|---|
+| `result_out_of_range` | Attempting to write to or read from a too-short buffer. |
+| `no_buffer_space` | Growing buffer would exceed allocation limits or overflow. |
+| `value_too_large` | Varint encoding is beyond representation limits. |
+| `message_size` | Message size exceeds user-defined allocation limits. |
+| `not_supported` | Attempt to call an RPC that is not listed as supported. |
+| `bad_message` | Attempt to read a variant of unrecognized type. |
+| `invalid_argument` | Attempting to serialize a null pointer or a valueless variant. |
+| `protocol_error` | Attempt to deserialize an invalid protocol message. |
 
 ---
 
@@ -1444,41 +1442,41 @@ absolute numbers may differ on your toolchain. Results from
 
 ### GCC 11
 
-| library     | test case    | bin size | data size |  ser time |  des time |
-| ----------- | ------------ | -------: | --------: | --------: | --------: |
-| zpp_bits    | general      |   52192B |     8413B | **733ms** | **693ms** |
-| zpp_bits    | fixed buffer |   48000B |     8413B | **620ms** | **667ms** |
-| bitsery     | general      |   70904B |     6913B |    1470ms |    1524ms |
-| bitsery     | fixed buffer |   53648B |     6913B |     927ms |    1466ms |
-| boost       | general      |  279024B |    11037B |   15126ms |   12724ms |
-| cereal      | general      |   70560B |    10413B |   10777ms |    9088ms |
-| flatbuffers | general      |   70640B |    14924B |    8757ms |    3361ms |
-| handwritten | general      |   47936B |    10413B |    1506ms |    1577ms |
-| handwritten | unsafe       |   47944B |    10413B |    1616ms |    1392ms |
-| iostream    | general      |   53872B |     8413B |   11956ms |   12928ms |
-| msgpack     | general      |   89144B |     8857B |    2770ms |   14033ms |
-| protobuf    | general      | 2077864B |    10018B |   19929ms |   20592ms |
-| protobuf    | arena        | 2077872B |    10018B |   10319ms |   11787ms |
-| yas         | general      |   61072B |    10463B |    2286ms |    1770ms |
+| library | test case | bin size | data size | ser time | des time |
+|---|---|---:|---:|---:|---:|
+| zpp_bits | general | 52192B | 8413B | **733ms** | **693ms** |
+| zpp_bits | fixed buffer | 48000B | 8413B | **620ms** | **667ms** |
+| bitsery | general | 70904B | 6913B | 1470ms | 1524ms |
+| bitsery | fixed buffer | 53648B | 6913B | 927ms | 1466ms |
+| boost | general | 279024B | 11037B | 15126ms | 12724ms |
+| cereal | general | 70560B | 10413B | 10777ms | 9088ms |
+| flatbuffers | general | 70640B | 14924B | 8757ms | 3361ms |
+| handwritten | general | 47936B | 10413B | 1506ms | 1577ms |
+| handwritten | unsafe | 47944B | 10413B | 1616ms | 1392ms |
+| iostream | general | 53872B | 8413B | 11956ms | 12928ms |
+| msgpack | general | 89144B | 8857B | 2770ms | 14033ms |
+| protobuf | general | 2077864B | 10018B | 19929ms | 20592ms |
+| protobuf | arena | 2077872B | 10018B | 10319ms | 11787ms |
+| yas | general | 61072B | 10463B | 2286ms | 1770ms |
 
 ### Clang 12.0.1
 
-| library     | test case    | bin size | data size |  ser time |  des time |
-| ----------- | ------------ | -------: | --------: | --------: | --------: |
-| zpp_bits    | general      |   47128B |     8413B | **790ms** | **715ms** |
-| zpp_bits    | fixed buffer |   43056B |     8413B | **605ms** | **694ms** |
-| bitsery     | general      |   53728B |     6913B |    2128ms |    1832ms |
-| bitsery     | fixed buffer |   49248B |     6913B |     946ms |    1941ms |
-| boost       | general      |  237008B |    11037B |   16011ms |   13017ms |
-| cereal      | general      |   61480B |    10413B |    9977ms |    8565ms |
-| flatbuffers | general      |   62512B |    14924B |    9812ms |    3472ms |
-| handwritten | general      |   43112B |    10413B |    1391ms |    1321ms |
-| handwritten | unsafe       |   43120B |    10413B |    1393ms |    1212ms |
-| iostream    | general      |   48632B |     8413B |   10992ms |   12771ms |
-| msgpack     | general      |   77384B |     8857B |    3563ms |   14705ms |
-| protobuf    | general      | 2032712B |    10018B |   18125ms |   20211ms |
-| protobuf    | arena        | 2032760B |    10018B |    9166ms |   11378ms |
-| yas         | general      |   51000B |    10463B |    2114ms |    1558ms |
+| library | test case | bin size | data size | ser time | des time |
+|---|---|---:|---:|---:|---:|
+| zpp_bits | general | 47128B | 8413B | **790ms** | **715ms** |
+| zpp_bits | fixed buffer | 43056B | 8413B | **605ms** | **694ms** |
+| bitsery | general | 53728B | 6913B | 2128ms | 1832ms |
+| bitsery | fixed buffer | 49248B | 6913B | 946ms | 1941ms |
+| boost | general | 237008B | 11037B | 16011ms | 13017ms |
+| cereal | general | 61480B | 10413B | 9977ms | 8565ms |
+| flatbuffers | general | 62512B | 14924B | 9812ms | 3472ms |
+| handwritten | general | 43112B | 10413B | 1391ms | 1321ms |
+| handwritten | unsafe | 43120B | 10413B | 1393ms | 1212ms |
+| iostream | general | 48632B | 8413B | 10992ms | 12771ms |
+| msgpack | general | 77384B | 8857B | 3563ms | 14705ms |
+| protobuf | general | 2032712B | 10018B | 18125ms | 20211ms |
+| protobuf | arena | 2032760B | 10018B | 9166ms | 11378ms |
+| yas | general | 51000B | 10463B | 2114ms | 1558ms |
 
 ---
 
