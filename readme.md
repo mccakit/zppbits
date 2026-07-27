@@ -1,7 +1,12 @@
-Port of zppbits to C++ modules, C++26 required.
+# zpp.bits
 
-API reference [here](https://mccakit.github.io/zppbits/)
+zpp.bits is a C++ Module port of zpp.bits, A lightweight C++20 serialization and RPC library
 
-Manual [here](https://github.com/mccakit/zppbits/blob/main/docs/manual/manual.pdf)
+Project is built using CMake/Ninja and packaged via CPS. CMake 4.4 and later is required.
 
-Built by CMake, packaged by pkgconf.
+Build using cmake, and consume via CPS by pointing to `CMAKE_INSTALL_PREFIX` via `CMAKE_PREFIX_PATH`
+
+```cmake
+find_package(zppbits)
+target_link_libraries($PROJECT PRIVATE zppbits::cxx_module)
+```
