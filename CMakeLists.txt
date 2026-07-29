@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 4.4)
 project(
-    zppbits
+    zpp-bits
     VERSION 4.7.3
     DESCRIPTION "A lightweight C++ serialization and RPC library"
     LANGUAGES C CXX)
