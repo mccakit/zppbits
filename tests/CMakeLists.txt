@@ -5,7 +5,7 @@ target_sources(
     test_helper
     PUBLIC FILE_SET CXX_MODULES FILES ${CMAKE_CURRENT_SOURCE_DIR}/helpers/helper.cpp
 )
-target_link_libraries(test_helper GTest::gtest GTest::gmock zppbits)
+target_link_libraries(test_helper GTest::gtest GTest::gmock zpp-bits)
 
 file(
     GLOB test_srcs
@@ -17,6 +17,6 @@ include(GoogleTest)
 foreach(test_src ${test_srcs})
     get_filename_component(test_name ${test_src} NAME_WE)
     add_executable(${test_name} ${test_src})
-    target_link_libraries(${test_name} GTest::gtest GTest::gmock GTest::Main test_helper zppbits)
+    target_link_libraries(${test_name} GTest::gtest GTest::gmock GTest::Main test_helper zpp-bits)
     gtest_discover_tests(${test_name})
 endforeach()
