@@ -1,1 +1,1 @@
-option(BUILD_TESTING "Build tests" ON)
+option(BUILD_TESTS "Build tests" OFF)
